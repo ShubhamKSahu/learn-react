@@ -1,11 +1,8 @@
 import './TabButton.css'
-export default function TabButton(props) {
-    function clickHandler(){
-        console.log("Button Clicked!")
-    }
+export default function TabButton({children, onSelect}) {
   return (
     <li>
-      <button onClick={clickHandler}>{props.children}</button>
+      <button onClick={onSelect}>{children}</button>
     </li>
   );
 }
