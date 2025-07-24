@@ -1,3 +1,4 @@
+import reactImg from './assets/react-core-concepts.png'
 const description = ['Fundamental', 'Core', 'Crucial'];
 let randomIndex = Math.floor(Math.random() * (description.length));
 console.log(randomIndex);
@@ -5,7 +6,7 @@ console.log(randomIndex);
 function Header() {
   return (
     <header>
-      <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
+      <img src={reactImg} alt="Stylized atom" />
       <h1>React Essentials</h1>
       <p>
         {description[randomIndex]} React concepts you will need for almost any app you are
