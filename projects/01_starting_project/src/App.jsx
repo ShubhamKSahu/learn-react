@@ -4,9 +4,10 @@ import CoreConcepts from './components/coreConceptComponent/CoreConcept';
 import TabButton from './components/tabButtonComponent/TabButton';
 import { CORE_CONCEPTS } from './data';
 function App() {
-  function handleSelect(){
-    console.log("Button selected!");
-  }
+  function handleSelect(tab) {
+  console.log('handleSelect called with:', tab);
+}
+
   return (
     <div>
       <Header></Header>
@@ -19,25 +20,22 @@ function App() {
               desc={CORE_CONCEPTS[0].desc}
               image={CORE_CONCEPTS[0].image}
             ></CoreConcepts>
-            <CoreConcepts
-            {...CORE_CONCEPTS[1]}
-            ></CoreConcepts>
-            <CoreConcepts
-              {...CORE_CONCEPTS[2]}
-            ></CoreConcepts>
-            <CoreConcepts
-             {...CORE_CONCEPTS[3]}
-            ></CoreConcepts>
+            <CoreConcepts {...CORE_CONCEPTS[1]}></CoreConcepts>
+            <CoreConcepts {...CORE_CONCEPTS[2]}></CoreConcepts>
+            <CoreConcepts {...CORE_CONCEPTS[3]}></CoreConcepts>
           </ul>
         </section>
-        <section id='examples'>
+        <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton onSelect={handleSelect}>Components</TabButton>
-            <TabButton onSelect={handleSelect}>JSX</TabButton>
-            <TabButton onSelect={handleSelect}>Props</TabButton>
-            <TabButton onSelect={handleSelect}>State</TabButton>
+            <TabButton onSelect={() => handleSelect("Components")}>
+              Components
+            </TabButton>
+            <TabButton onSelect={() => handleSelect("Jsx")}>JSX</TabButton>
+            <TabButton onSelect={() => handleSelect("Props")}>Props</TabButton>
+            <TabButton onSelect={() => handleSelect("State")}>State</TabButton>
           </menu>
+          Dynamic Content
         </section>
       </main>
     </div>
