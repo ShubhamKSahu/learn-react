@@ -1,11 +1,12 @@
-
+import { useState } from 'react';
 import Header from './components/headerComponent/Header';
 import CoreConcepts from './components/coreConceptComponent/CoreConcept';
 import TabButton from './components/tabButtonComponent/TabButton';
 import { CORE_CONCEPTS } from './data';
 function App() {
-  function handleSelect(tab) {
-  console.log('handleSelect called with:', tab);
+  const [ tabName, setTabName] = useState("Please select a tab!")
+  function handleSelect(tab) { 
+  setTabName(tab);
 }
 
   return (
@@ -35,7 +36,7 @@ function App() {
             <TabButton onSelect={() => handleSelect("Props")}>Props</TabButton>
             <TabButton onSelect={() => handleSelect("State")}>State</TabButton>
           </menu>
-          Dynamic Content
+          {tabName}
         </section>
       </main>
     </div>
