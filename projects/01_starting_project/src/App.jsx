@@ -3,6 +3,7 @@ import Header from './components/headerComponent/Header';
 import CoreConcepts from './components/coreConceptComponent/CoreConcept';
 import TabButton from './components/tabButtonComponent/TabButton';
 import { CORE_CONCEPTS } from './data';
+import { EXAMPLES } from './data';
 function App() {
   const [ tabName, setTabName] = useState("Please select a tab!")
   function handleSelect(tab) { 
@@ -29,14 +30,20 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton onSelect={() => handleSelect("Components")}>
+            <TabButton onSelect={() => handleSelect("components")}>
               Components
             </TabButton>
-            <TabButton onSelect={() => handleSelect("Jsx")}>JSX</TabButton>
-            <TabButton onSelect={() => handleSelect("Props")}>Props</TabButton>
-            <TabButton onSelect={() => handleSelect("State")}>State</TabButton>
+            <TabButton onSelect={() => handleSelect("jsx")}>JSX</TabButton>
+            <TabButton onSelect={() => handleSelect("props")}>Props</TabButton>
+            <TabButton onSelect={() => handleSelect("state")}>State</TabButton>
           </menu>
-          {tabName}
+          <div id="tab-content">
+            <h3>{EXAMPLES[tabName].title}</h3>
+            <p>{EXAMPLES[tabName].description}</p>
+            <pre>
+              <code>{EXAMPLES[tabName].code}</code>
+            </pre>
+          </div>
         </section>
       </main>
     </div>
