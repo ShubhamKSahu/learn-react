@@ -2,10 +2,9 @@ import { useState } from 'react';
 import Header from './components/headerComponent/Header';
 import CoreConcepts from './components/coreConceptComponent/CoreConcept';
 import TabButton from './components/tabButtonComponent/TabButton';
-import { CORE_CONCEPTS } from './data';
-import { EXAMPLES } from './data';
+import { CORE_CONCEPTS, EXAMPLES } from './data';
 function App() {
-  const [ tabName, setTabName] = useState("Please select a tab!")
+  const [ tabName, setTabName] = useState("components")
   function handleSelect(tab) { 
   setTabName(tab);
 }
