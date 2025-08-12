@@ -1,0 +1,67 @@
+.carlist {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.carlist h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1890ff; 
+}
+
+.car-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+#carinfo {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+#carinfo img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+#carinfo h2 {
+  font-size: 1.3rem;
+  margin: 15px 0 5px;
+}
+
+#carinfo p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.carlist-btns {
+  
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+.carlist-btns button {
+  color: #fff;
+  background-color: #5aa3e7;
+  border: none;
+  height: 32px;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.carlist-btns button:hover{
+    background-color: #1890ff;
+}
+
