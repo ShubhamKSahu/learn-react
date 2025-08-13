@@ -5,11 +5,11 @@ import Dashboard from "./components/dashboard-component/Dashboard";
 import CarList from "./components/carlist-component/CarList";
 import CarDetails from "./components/carlist-component/CarDetails";
 import BookingsList from "./components/carlist-component/BookingsList";
-import { BookingProvider } from "./context/BookingContext";
+import BookingWrapper from "./context/BookingContext";
 
 function App() {
   return (
-    <BookingProvider>
+    <BookingWrapper>
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
@@ -19,7 +19,7 @@ function App() {
           <Route path="/bookings" element={<BookingsList />} />
         </Routes>
       </Router>
-    </BookingProvider>
+    </BookingWrapper>
   );
 }
 

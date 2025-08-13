@@ -7,3 +7,7 @@ export type Car = {
   description: string;
 };
 
+export type BookingContextType = {
+    bookings: Car[],
+    addBookings: (car: Car)=> void;
+}
