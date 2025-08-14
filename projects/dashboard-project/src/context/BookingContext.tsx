@@ -11,8 +11,6 @@ export default function BookingWrapper({ children }: { children: React.ReactNode
   const [bookings, setBookings] = useState<Car[]>([]);
 
   function addBookings(car: Car) {
-    console.log("Bookings....");
-    
     setBookings((prev) => [...prev, car]);
   }
 

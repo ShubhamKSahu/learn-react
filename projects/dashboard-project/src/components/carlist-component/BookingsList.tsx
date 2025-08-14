@@ -4,7 +4,7 @@ import cars from "../../data/car-data";
 
 export default function BookingsList() {
   const { bookings } = useContext(BookingContext);
-console.log("Bookings from context:", bookings);
+  console.log("Bookings from context:", bookings);
 
   return (
     <>
