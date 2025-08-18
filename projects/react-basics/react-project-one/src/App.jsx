@@ -1,11 +1,10 @@
 
 import './App.css'
+import UserCard from '../src/components/UserCard'
 
 function App() {
-  
-
   return (
-    <div>Hello</div>
+    <UserCard/>
   )
 }
 
