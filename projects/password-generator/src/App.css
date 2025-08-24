@@ -1,1 +1,19 @@
 @import "tailwindcss";
+.password-container{
+  height: 150px;
+  width: 700px;
+  margin: auto;
+  background-color: beige;
+  color: rgb(91, 67, 62);
+  border-radius: 15px;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+.password-field{
+  background-color: rgb(150, 133, 110);
+  height: 50px;
+  width: 70%;
+  border-radius: 15px;
+  margin-left: 1rem;
+  display: flex;
+}
