@@ -1,15 +1,28 @@
-import { Button } from 'antd'
-import './App.css'
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import DashboardPage from "./pages/DashboardPage";
+import ProductPage from "./pages/ProductPage";
+import Users from "./pages/Users";
+import SettingsPage from "./pages/SettingsPage";
+import Feedback from "./pages/Feedback";
+import HomePage from "./pages/HomePage";
+import RootLayout from "./pages/RootLayout";
 
-function App() {
-  
-
-  return (
-    <>
-     <h1>Hi</h1>
-     <Button type='primary'>Click me</Button>
-    </>
-  )
-}
-
-export default App
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      {index: true, element : <HomePage/>},
+      { path: "/dashboard", element: <DashboardPage /> },
+      { path: "/products", element: <ProductPage /> },
+      { path: "/users", element: <Users /> },
+      { path: "/settings", element: <SettingsPage /> },
+      { path: "/feedback", element: <Feedback /> },
+    ],
+  },
+]);
+const App = () => {
+  return <RouterProvider router={router} />;
+};
+export default App;
