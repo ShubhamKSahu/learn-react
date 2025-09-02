@@ -5,13 +5,16 @@ function EventsNavigation() {
     <>
       <header>
         <nav>
-          {events.map((evt) => (
-            <ul>
+          <ul>
+            {events.map((evt) => (
+            
               <li>
                 <Link to={`/events/${evt.id}`}>{evt.title}</Link>
               </li>
-            </ul>
+            
           ))}
+          </ul>
+          
         </nav>
       </header>
     </>
